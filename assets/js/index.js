@@ -1,4 +1,8 @@
 const purchasePriceInput = prompt('Введіть суму покупки');
+const bigDiscountLimit = 800;
+const smallDiscountLimit = 500;
+const bigDiscount = 5; // Значення "у відсотках"
+const smallDiscount = 3; // Значення "у відсотках"
 let discount;
 
 // Якщо натиснуто на "Відмінити"
@@ -14,14 +18,15 @@ if (purchasePriceInput !== null) {
     } else {
       //Якщо ціна покупки від'ємна
       if (purchasePrice >= 0) {
-        if (purchasePrice > 800) {
-          discount = 0.05;
-        } else if (purchasePrice > 500) {
-          discount = 0.03;
+        if (purchasePrice > bigDiscountLimit) {
+          discount = bigDiscount / 100;
+        } else if (purchasePrice > smallDiscountLimit) {
+          discount = smallDiscount / 100;
         } else {
           discount = 0;
         }
 
+        console.log(discount);
         alert(purchasePrice - purchasePrice * discount);
       } else {
         alert("Сума покупки не може бути від'ємною");
