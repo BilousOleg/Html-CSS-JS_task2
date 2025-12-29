@@ -1,20 +1,20 @@
-const firstInput = prompt('Введіть перше число');
-const secondInput = prompt('Введіть друге число');
+const firstNumInput = prompt('Введіть перше число');
+const secondNumInput = prompt('Введіть друге число');
 let isMultiple = false;
 
 // Якщо натиснуто "Відмінити"
-if (firstInput !== null && secondInput !== null) {
+if (firstNumInput !== null && secondNumInput !== null) {
   // Якщо не введено нічого
-  if (firstInput.trim() === '' || secondInput.trim() === '') {
+  if (firstNumInput.trim() === '' || secondNumInput.trim() === '') {
     alert('Будь-ласка, введіть обидва числа!');
   } else {
-    const firstNumber = Number(firstInput);
-    const secondNumber = Number(secondInput);
+    const firstNum = Number(firstNumInput);
+    const secondNum = Number(secondNumInput);
     // Якщо введено символ
-    if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
+    if (Number.isNaN(firstNum) || Number.isNaN(secondNum)) {
       alert('Будь-ласка, введіть ЧИСЛА!');
     } else {
-      if (firstNumber % secondNumber === 0) {
+      if (firstNum % secondNum === 0) {
         isMultiple = true;
       }
       alert(isMultiple);
