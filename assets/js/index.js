@@ -16,9 +16,9 @@ if (firstInput !== null && secondInput !== null) {
       alert('Будь-ласка, введіть ЧИСЛА!');
     } else {
       if ((firstNumber + secondNumber) % 5 === 0) {
-        alert('Сума чисел кратна 5');
+        alert('Сума чисел кратна 5!');
       } else {
-        alert('Сума чисел НЕ кратна 5');
+        alert('Сума чисел НЕ кратна 5!');
       }
     }
   }
