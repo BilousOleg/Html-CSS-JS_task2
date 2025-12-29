@@ -1,28 +1,30 @@
-const inputChoice = prompt(
-  'Введіть цифру, що відповідає обраному вами напою:\n1 - Чай\n2 - Кава\n3 - Сік\n4 - Вода'
-);
+const purchasePriceInput = prompt('Введіть суму покупки');
+let discount;
+
 // Якщо натиснуто на "Відмінити"
-if (inputChoice !== null) {
+if (purchasePriceInput !== null) {
   // Якщо натиснуто на "ОК" без введення даних
-  if (inputChoice.trim() === '') {
-    // Метод trim() для обрізання пробілів й приведення строки до нормального вигляду
-    alert('Будь-ласка, ВВЕДІТЬ цифру!');
+  if (purchasePriceInput.trim() === '') {
+    alert('ВВЕДІТЬ суму покупки!');
   } else {
-    const choice = Number(inputChoice);
+    const purchasePrice = Number(purchasePriceInput);
     // Якщо введено символ
-    if (Number.isNaN(choice)) {
-      alert('Будь-ласка, введіть ЦИФРУ!');
+    if (Number.isNaN(purchasePrice)) {
+      alert('Введіть ЧИСЛО, що характеризує суму покупки!');
     } else {
-      if (choice === 1) {
-        alert('Ви обрали чай');
-      } else if (choice === 2) {
-        alert('Ви обрали каву');
-      } else if (choice === 3) {
-        alert('Ви обрали сік');
-      } else if (choice === 4) {
-        alert('Ви обрали воду');
+      //Якщо ціна покупки від'ємна
+      if (purchasePrice >= 0) {
+        if (purchasePrice > 800) {
+          discount = 0.05;
+        } else if (purchasePrice > 500) {
+          discount = 0.03;
+        } else {
+          discount = 0;
+        }
+
+        alert(purchasePrice - purchasePrice * discount);
       } else {
-        alert('Такого напою у нас нема');
+        alert("Сума покупки не може бути від'ємною");
       }
     }
   }
