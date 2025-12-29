@@ -92,6 +92,8 @@ if (purchasePriceInput !== null) {
   }
 }
 
+// Завдання 4
+
 const firstNumInput = prompt('Введіть перше число');
 const secondNumInput = prompt('Введіть друге число');
 let isMultiple = false;
