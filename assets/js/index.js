@@ -37,24 +37,16 @@ if (inputChoice !== null) {
   if (inputChoice.trim() === '') {
     // Метод trim() для обрізання пробілів й приведення строки до нормального вигляду
     alert('Будь-ласка, ВВЕДІТЬ цифру!');
+  } else if (inputChoice === '1') {
+    alert('Ви обрали чай');
+  } else if (inputChoice === '2') {
+    alert('Ви обрали каву');
+  } else if (inputChoice === '3') {
+    alert('Ви обрали сік');
+  } else if (inputChoice === '4') {
+    alert('Ви обрали воду');
   } else {
-    const choice = Number(inputChoice);
-    // Якщо введено символ
-    if (Number.isNaN(choice)) {
-      alert('Будь-ласка, введіть ЦИФРУ!');
-    } else {
-      if (choice === 1) {
-        alert('Ви обрали чай');
-      } else if (choice === 2) {
-        alert('Ви обрали каву');
-      } else if (choice === 3) {
-        alert('Ви обрали сік');
-      } else if (choice === 4) {
-        alert('Ви обрали воду');
-      } else {
-        alert('Такого напою у нас нема');
-      }
-    }
+    alert('Такого напою у нас нема');
   }
 }
 
